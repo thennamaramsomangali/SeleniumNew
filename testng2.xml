@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" verbose="5">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="allLeads.DeleteLead">
+      <methods>
+      <include name="deleteLead"/>
+      </methods>
+      </class>
+      <class name="allLeads.DuplicateLead">
+      <methods>
+      <include name="DuplicateLead"/>
+      </methods>
+      </class>
+      <class name="allLeads.EditLead">
+      <methods>
+      <include name="editLead"/>
+      </methods>
+      </class>
+      <class name="allLeads.MergeLead">
+      <methods>
+      <include name="mergeLead"/>
+      </methods>
+      </class>
+      <class name="allLeads.Createlead">
+      <methods>
+      <include name="mergeLead"/>
+      </methods>
+      </class>
+    
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
