@@ -79,14 +79,14 @@ public class FlipkartTestCase   {
 
 		//select min and max price values from drop down
 
-		WebElement minPriceDD = driver.findElementByXPath("(//select[@class='fPjUPw'])[1]");
+		WebElement minPriceDD = driver.findElementByXPath("(//select[@class='a_eCSK'])[1]");
 
 		Select priceDD1 =new Select(minPriceDD);
 
 		priceDD1.selectByValue("25000");
 
 
-		WebElement maxPriceDD = driver.findElementByXPath("(//select[@class='fPjUPw'])[2]");
+		WebElement maxPriceDD = driver.findElementByXPath("(//select[@class='a_eCSK'])[2]");
 
 		Select priceDD2 =new Select(maxPriceDD);
 
@@ -113,25 +113,13 @@ public class FlipkartTestCase   {
 		String priceOfFirst = p1.replaceAll("\\D", "");
 		System.out.println("FIRST PRICE  "  +priceOfFirst);
 		WebElement tv = driver.findElementByXPath("(//div[@class='_1-2Iqu row']/div/div)[1]");
-		Thread.sleep(5000);
 		tv.click();
 
 		//switch to second window
 
-		List<String> allWindows = driver.getWindowHandles();
-		allWindows.addAll(allWindows);
-		String secWindow = allWindows.get(2);
-		driver.switchTo().window(secWindow);
-
-		//get price from second window
-
-		WebElement price = driver.findElementByXPath("//div[@class='_1vC4OE _37U4_g']");
-		String priceValue = price.getText();
-		String priceOfSecond = priceValue.replaceAll("\\D", "");
-		System.out.println("PRICE from second window  " +priceOfSecond);
-
+		Set<String> allWindows = driver.getWindowHandles();
 		
-		/*List<String> listofWindow = new ArrayList<String>();
+		List<String> listofWindow = new ArrayList<String>();
 		listofWindow.addAll(allWindows);
 		String secWindow = listofWindow.get(2);
 		driver.switchTo().window(secWindow);
@@ -202,7 +190,6 @@ public class FlipkartTestCase   {
 			System.out.println(item1Val + " Price of item 1 is less ");
 		else 
 			System.out.println(item2Val + " Price of item 2 is less ");
-*/
 	}
 }
 
