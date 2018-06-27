@@ -1,6 +1,6 @@
 package HwJavaWeek2;
 
-import java.util.Scanner;
+import java.util.*;
 
 //import org.apache.commons.lang3.ArrayUtils;
 public class ArraySpiralTestLeaf {
@@ -53,9 +53,10 @@ public class ArraySpiralTestLeaf {
 		System.out.println("sum of lower half:"+lowerDiagSum);
 		System.out.print("half which is greater is ");
 		if(upperDiagSum>lowerDiagSum){
-			System.out.print(ArrayUtils.toString(upperDiag));
+			System.out.print(Arrays.toString(upperDiag));
 		}else{
-			System.out.print(ArrayUtils.toString(lowerDiag));
+			System.out.print(Arrays.toString(lowerDiag));
+			
 		}
 	}
 }

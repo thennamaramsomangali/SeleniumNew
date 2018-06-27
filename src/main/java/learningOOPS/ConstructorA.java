@@ -3,7 +3,8 @@ package learningOOPS;
 public class ConstructorA {
 	
 	public void ConstructorA() {
-		System.out.println("empty of polyA");
+		System.out.println("ConstructorA with no args");
+		
 	}
 	
 	public void ConstructorA(int i) {

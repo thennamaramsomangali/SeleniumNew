@@ -12,8 +12,7 @@ public interface  InterfaceA {
 }
 
 
-//protected interface  InterfaceA {
-
+//protected interface  InterfaceA { 
 //Illegal modifier for the interface InterfaceA; only public & abstract are permitted
 
 //cannot create obj for interface as it cannot have constructor
