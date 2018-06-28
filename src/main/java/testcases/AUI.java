@@ -16,7 +16,7 @@ public class AUI extends SeMethods {
 	public void run() {
 
 		//drag
-
+		 
 
 		startApp("chrome", "http://jqueryui.com/draggable");
 		WebElement frame = locateElement("class", "demo-frame");

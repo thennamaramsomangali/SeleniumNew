@@ -43,7 +43,7 @@ public class SeMethods implements WdMethods{
 			}
 			driver.manage().window().maximize();
 			driver.get(url);
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			System.out.println("The Browser is Launched");
 		} catch (WebDriverException e) {
 			// TODO Auto-generated catch block
@@ -264,9 +264,18 @@ public class SeMethods implements WdMethods{
 	}
 
 	public void switchToFrame(WebElement ele) {
-		driver.switchTo().frame(ele);
-		System.out.println("switched to"+ele);
-		takeSnap();
+		try {
+			driver.switchTo().frame(ele);
+			System.out.println("switched to"+ele);
+			takeSnap();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+			
+			System.err.println("Such frame "+ele+"is not found");
+		}finally {
+			takeSnap();
+		}
 
 	}
 

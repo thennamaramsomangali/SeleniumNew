@@ -30,7 +30,7 @@ public class Table {
 			driver.findElementById("chkSelectDateOnly").click();			
 		}
 
-		WebElement table = driver.findElementByXPath("//table[@class='DataTable TrainList']"); //locate table
+		/*WebElement table = driver.findElementByXPath("//table[@class='DataTable TrainList']"); //locate table
 
 		List<WebElement> allRows = table.findElements(By.tagName("tr"));//all rows
 
@@ -42,8 +42,26 @@ public class Table {
 		System.out.println(columns.size());
 
 		columns.get(1).click(); //select column2
+*/		
+		
+		/*for(int i=0;i<=6;i++) {
+		List<WebElement> firstRowFirstColumn = driver.findElementsByXPath("//table[@class='DataTable TrainList']/tbody/tr/td[i]");
+		WebElement eleValue = firstRowFirstColumn.get(i);
+		System.out.println(eleValue.getText());*/
+		
+		for(int numberOfRows=1; numberOfRows<=22; numberOfRows++)
+		{
+		for(int numberOfCol=1; numberOfCol <=23; numberOfCol++)
+		{
+		WebElement ele = driver.findElementByXPath("//table[@class='DataTable TrainList']//tr["+numberOfRows+"]/td["+numberOfCol+"]");
+		System.out.print(ele.getText());
+	
+		}
+		System.out.println();
+		}
+		
+		//driver.findElementByXPath("(//table[@class='DataTable TrainList']//tr)[3]/td[3]").click();
+		
+	}}	
 		
 
-	}
-
-}

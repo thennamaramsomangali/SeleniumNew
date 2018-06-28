@@ -6,15 +6,17 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.junit.internal.runners.model.EachTestNotifier;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class AllinOne {
-
+	RemoteWebDriver driver;
 	public static void main(String[] args) throws InterruptedException, IOException {
 		// TODO Auto-generated method stub
 
@@ -33,9 +35,6 @@ public class AllinOne {
 		driver.findElementById("password").sendKeys("crmsfa");
 		driver.findElementByClassName("decorativeSubmit").click();		
 
-
-
-
 		//Thread.sleep(5000);	
 		driver.findElementByLinkText("CRM/SFA").click();
 		driver.findElementByLinkText("Leads").click();
@@ -46,11 +45,23 @@ public class AllinOne {
 		driver.findElementById("createLeadForm_firstName").sendKeys("Ganesh");
 		driver.findElementById("createLeadForm_lastName").sendKeys("Ts");
 
-		WebElement source = driver.findElementById("createLeadForm_dataSourceId");
+		/*WebElement source = driver.findElementById("createLeadForm_dataSourceId");
 		Select dd=new Select(source);
 		dd.selectByVisibleText("Employee");  //select Employee alone
-		driver.findElementById("createLeadForm_primaryEmail").sendKeys("ganeshbabuts26@gmail.com");
-
+		driver.findElementById("createLeadForm_primaryEmail").sendKeys("ganeshbabuts26@gmail.com");*/
+		
+		//WebElement findElementByTagName = driver.findElementByTagName("select");
+		List<WebElement> listElements = driver.findElements(By.tagName("select"));
+		
+		for (WebElement eachElement : listElements) {
+			
+			//System.out.println(eachElement.getText());
+			String text = eachElement.getText();
+			if (text.equalsIgnoreCase("employee")) eachElement.click();
+		}
+		
+		
+		
 		//take no of rows/columns and select date alone
 
 		driver.findElementById("createLeadForm_birthDate-button").click();
