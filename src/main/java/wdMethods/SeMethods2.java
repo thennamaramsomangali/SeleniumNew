@@ -292,6 +292,7 @@ public class SeMethods2 implements WdMethods{
 	}finally {
   	  takeSnap();
     }
+	}
 
 	@Override
 	public void switchToFrame(WebElement ele) {
