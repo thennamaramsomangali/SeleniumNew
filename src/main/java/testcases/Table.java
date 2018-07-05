@@ -60,8 +60,15 @@ public class Table {
 		System.out.println();
 		}
 		
-		//driver.findElementByXPath("(//table[@class='DataTable TrainList']//tr)[3]/td[3]").click();
+		/*
+		WebElement val = driver.findElementByXPath("(//table[@class='DataTable TrainList']//tr)[3]/td[2]");
+		System.out.println(val.getText());
 		
-	}}	
+		WebElement ele = driver.findElementByXPath("//table[@class='DataTable TrainList']//tr[3]/td[2]");
+		System.out.print(ele.getText());
+		ele.click();
+		
+		//above both same
+*/	}}	
 		
 

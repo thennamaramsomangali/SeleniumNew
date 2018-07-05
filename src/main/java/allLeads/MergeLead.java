@@ -18,11 +18,16 @@ import wdMethods.SeMethods;
 
 //public class MergeLead extends SeMethods{
 public class MergeLead extends ProjectMethods{
-	@Test  (timeOut=20000)
+	@Test  //(timeOut=20000)
 	public void mergeLead() throws InterruptedException {
 		
-		startApp("chrome", "http://leaftaps.com/opentaps");
+		//startApp("chrome", "http://leaftaps.com/opentaps");
 		System.out.println("merge");
+	}
+	
+	@Test	
+	public void sampleMethod() throws InterruptedException {
+		System.out.println("samplemerge");
 		/*WebElement userName = locateElement("id","username");
 		type(userName, "DemoSalesManager");
 		WebElement passWord = locateElement("id", "password");

@@ -2,8 +2,19 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" verbose="5">
 	<test thread-count="5" name="Test">
+		<groups>
+			<run>
+	
+				<exclude name="allLeads.DuplicateLead"></exclude>
+			</run>
+
+		</groups>
 		<packages>
-			<package name="allLeads"></package>
+		
+
+			<package name="allLeads">
+			
+			</package>
 		</packages>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

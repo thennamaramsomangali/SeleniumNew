@@ -43,8 +43,6 @@ public class SeMethods2 implements WdMethods{
 			driver.get(url);
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			System.out.println("URL is launched");
-
-
 		} catch(WebDriverException e){
 			//e.printStackTrace();
 
@@ -52,9 +50,6 @@ public class SeMethods2 implements WdMethods{
 		}
 
 	}
-
-
-
 	@Override
 	public WebElement locateElement(String locator, String locValue) {
 		// TODO Auto-generated method stub
@@ -246,8 +241,6 @@ public class SeMethods2 implements WdMethods{
 			}finally {
 				takeSnap();
 			}
-		
-
 	}
 
 	@Override
@@ -292,6 +285,7 @@ public class SeMethods2 implements WdMethods{
 	}finally {
   	  takeSnap();
     }
+	}
 
 	@Override
 	public void switchToFrame(WebElement ele) {
@@ -305,7 +299,6 @@ public class SeMethods2 implements WdMethods{
 		}finally {
 			takeSnap();
 		}
-		
 	}
 
 	@Override
@@ -340,14 +333,8 @@ public class SeMethods2 implements WdMethods{
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		
-			
 		}
 		i++;
-		
-		
-		
-
 	}
 
 	@Override

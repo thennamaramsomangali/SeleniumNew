@@ -8,16 +8,16 @@ import allLeads.ProjectMethods;
 //public class DeleteLead extends SeMethods {
 	public class DeleteLead extends ProjectMethods{
 
-	//@Test (dependsOnMethods= {"testcases.CreateTestLead.createLead"}) //if create lead failed delete lead skipped
-	/*public void deleteLead() throws InterruptedException {
+	@Test //(dependsOnMethods= {"testcases.CreateTestLead.createLead"}) //if create lead failed delete lead skipped
+	public void deleteLead() throws InterruptedException {
 		
-		startApp("chrome", "http://leaftaps.com/opentaps");
+		//startApp("chrome", "http://leaftaps.com/opentaps");
 		System.out.println("delete");
-	}*/
+	}
 		
 	@Test	
 	public void sampleMethod() throws InterruptedException {
-		System.out.println("sampleMethod");
+		System.out.println("sampledelete");
 		/*WebElement userName = locateElement("id","username");
 		type(userName, "DemoSalesManager");
 		WebElement passWord = locateElement("id", "password");

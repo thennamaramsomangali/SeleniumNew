@@ -25,16 +25,18 @@ public class FindingBrokenLinks {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		driver.get("https://www.flipkart.com");
+		driver.get("https://si.delta.com");
 
 		List<WebElement> listOfLink = driver.findElements(By.tagName("a"));
 
-		for (WebElement eachLink : listOfLink) {
+		for (WebElement eachLinkhref : listOfLink) {
 
-			String url = eachLink.getAttribute("href");
-			
+			String urlhref = eachLinkhref.getAttribute("href");
+
+
+
 			try {
-				URL linkUrl=new URL(url);
+				URL linkUrl=new URL(urlhref);
 
 				HttpURLConnection urlConnect =(	HttpURLConnection) linkUrl.openConnection();
 
@@ -43,21 +45,47 @@ public class FindingBrokenLinks {
 				urlConnect.connect();
 
 				if(urlConnect.getResponseCode()==200)
-					System.out.println(url+"  OK");
+					System.out.println(urlhref+"  OK");
 				else
-					System.out.println(url+"  broken");
+					System.out.println(urlhref+"  broken");
 
 
 			} catch (MalformedURLException e) {
 				// TODO Auto-generated catch block
 				//e.printStackTrace();
-				System.out.println(url+" Is not found");
+				System.out.println(urlhref+" Is not found");
 			} 
 
+			/*for (WebElement eachLinkclass : listOfLink) {
+
+				String urlclass = eachLinkclass.getAttribute("class");
+
+			try {
+				URL linkUrl=new URL(urlclass);
+
+				HttpURLConnection urlConnect =(	HttpURLConnection) linkUrl.openConnection();
+
+				urlConnect.setConnectTimeout(3000);
+
+				urlConnect.connect();
+
+				if(urlConnect.getResponseCode()==200)
+					System.out.println(urlclass+"  OK");
+				else
+					System.out.println(urlclass+"  broken");
+
+
+			} catch (MalformedURLException e) {
+				// TODO Auto-generated catch block
+				//e.printStackTrace();
+				System.out.println(urlclass	+" Is not found");
+			}
+
+		}*/
+
+
+
 		}
-
-
-
 	}
 }
 

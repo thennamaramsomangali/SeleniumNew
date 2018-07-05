@@ -2,10 +2,14 @@ package allLeads;
 
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterGroups;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeGroups;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -20,19 +24,19 @@ public class ProjectMethods extends SeMethods{
 	public void login() {
 
 
-		startApp("chrome", "http://leaftaps.com/opentaps");
+		/*startApp("chrome", "http://leaftaps.com/opentaps");
 		WebElement userName = locateElement("id","username");
 		type(userName, "DemoSalesManager");
 		WebElement passWord = locateElement("id", "password");
 		type(passWord, "crmsfa");
 		WebElement login = locateElement("class", "decorativeSubmit");
-		click(login);	
+		click(login);	*/
 		System.out.println("BM");
-
+		
 
 	}
 
-	//@AfterMethod(groups= {"All"})
+	@AfterMethod //(groups= {"All"})
 	//@Test
 	public void close()	{
 
@@ -42,29 +46,49 @@ public class ProjectMethods extends SeMethods{
 
 	}
 
-	//@BeforeClass(groups= {"All"})
+	@BeforeClass//(groups= {"All"})
 	//@Test
 	public void beforeClass() {
 		System.out.println("BC");
 	}
 
-	//@AfterClass(groups= {"All"})
+	@AfterClass //(groups= {"All"})
 	//@Test(dependsOnMethods= {"beforeTest"})
 	public void afterClass() {
 		System.out.println("AC");
 	}
 
-	//@BeforeTest
+	@BeforeTest
 	//@Test(dependsOnMethods= {"beforeClass"})
 	public void beforeTest() {
 		System.out.println("BT");
 	}
-
-	//@AfterTest
+	
+	@AfterTest
 	//@Test
 	public void afterTest() {
 		System.out.println("AT");
 
+		
 	}
 
+	@BeforeGroups
+	public void beforeGroup() {
+		System.out.println("BG");
+	}
+	
+	@AfterGroups
+	public void afterGroup() {
+		System.out.println("AG");
+	}
+	
+	@BeforeSuite
+	public void beforeSuit() {
+		System.out.println("BS");
+	}
+	
+	@AfterSuite
+	public void afterSuit() {
+		System.out.println("AS");
+	}
 }
