@@ -19,6 +19,7 @@ public class Table {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		driver.findElementById("txtStationFrom").clear();
+		
 		driver.findElementById("txtStationFrom").sendKeys("MAS", Keys.TAB);
 
 		driver.findElementById("txtStationTo").clear();
