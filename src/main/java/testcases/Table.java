@@ -15,7 +15,8 @@ public class Table {
 		//System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");		
 		ChromeDriver driver = new ChromeDriver();	
 		driver.get("https://erail.in/");		
-		driver.manage().window().maximize();	
+		driver.manage().window().maximize();
+		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		driver.findElementById("txtStationFrom").clear();
