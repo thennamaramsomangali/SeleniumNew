@@ -29,7 +29,7 @@ public class SecondBigNumber {
 			System.out.println(arr[i]);
 
 		}
-		System.out.println(arr[2]);
+		System.out.println(arr[2]); //second big no.
 
 	}
 }

@@ -81,13 +81,13 @@ public class Array {
 
 		//creating two matrices  
 		int a1[][]={{1,3,4},{3,4,5}};  
-		System.out.println(a1.length);
+		System.out.println(a1.length);//2
 		int b[][]={{1,3,4},{3,4,5}}; 
-		System.out.println(b.length);
+		System.out.println(b.length);//2
 
 		//creating another matrix to store the sum of two matrices  
 		int c[][]=new int[2][3];  
-		System.out.println(c.length);
+		System.out.println(c.length);//2
 
 		for (int i = 0; i < 2; i++) {
 

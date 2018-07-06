@@ -1,6 +1,9 @@
 package testcases;
 
 import org.testng.annotations.Test;
+
+import junit.framework.Assert;
+
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
@@ -14,6 +17,7 @@ public class CreateTestLead extends SeMethods {
 		startApp("chrome", "http://leaftaps.com/opentaps");
 		WebElement userName = locateElement("id","username");
 		type(userName, "DemoSalesManager");
+		Assert.fail(); 
 		WebElement passWord = locateElement("id", "password");
 		type(passWord, "crmsfa");
 		WebElement login = locateElement("class", "decorativeSubmit");

@@ -17,7 +17,7 @@ public class AlertFrames {
 		//Thread.sleep(5000);
 		driver.switchTo().frame("iframeResult");
 		driver.findElementByXPath("//button[text()='Try it']").click();
-		driver.switchTo().alert();
+		
 		Alert myalert = driver.switchTo().alert();
 		
 		myalert.sendKeys("mann");

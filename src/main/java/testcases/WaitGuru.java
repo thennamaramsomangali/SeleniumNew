@@ -21,7 +21,7 @@ public class WaitGuru {
 	
 	protected WebDriver driver;
 	@Test
-	public void guru99tutorials() throws InterruptedException 
+	public void guru99tutorials()   
 	{
 	//System.setProperty ("webdriver.chrome.driver",".\\chromedriver.exe" );
 	driver = new ChromeDriver(); 

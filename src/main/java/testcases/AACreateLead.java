@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -69,7 +70,15 @@ public class AACreateLead {
 
 		//create lead
 		driver.findElementByLinkText("Create Lead").click();
-		driver.findElementById("createLeadForm_companyName").sendKeys("TCS \n cts");
+		WebElement ele = driver.findElementById("createLeadForm_companyName"); //.sendKeys("TCS \n cts");
+		
+		
+		
+		String myText = "first line\nsecond line";
+		myText = myText.replace("\n", Keys.chord(Keys.SHIFT, Keys.ENTER));
+		ele.sendKeys(myText);
+		
+		
 		driver.findElementById("createLeadForm_firstName").sendKeys("Ganesh");
 		driver.findElementById("createLeadForm_lastName").sendKeys("Ts");
 
@@ -81,7 +90,9 @@ public class AACreateLead {
 		//take no of rows/columns and select date alone
 
 		driver.findElementById("createLeadForm_birthDate-button").click();
+		
 		WebElement table = driver.findElementByXPath("//div[@unselectable='on']/ancestor::table[1]");
+		
 		List<WebElement> allrows = table.findElements(By.tagName("tr"));
 		int rowcount = allrows.size();
 		System.out.println(rowcount);	

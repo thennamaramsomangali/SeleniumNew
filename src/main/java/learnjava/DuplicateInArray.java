@@ -6,6 +6,8 @@ public class DuplicateInArray {
 		// TODO Auto-generated method stub
 
 		int[] arr= {1,2,1,1,2,1,2};
+		System.out.println(arr.length);
+		
 		
 		int count=0;
 		for (int i = 0; i < arr.length; i++) {

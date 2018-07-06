@@ -10,7 +10,7 @@ public class UniqueString {
 			
 			char eachchar = input.charAt(i);
 			
-			if(output.indexOf(eachchar)<1 && eachchar!=32) {
+			if(output.indexOf(eachchar)<2 && eachchar!=32) {
 				
 				output=output+eachchar;
 				

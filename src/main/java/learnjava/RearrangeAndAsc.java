@@ -21,7 +21,7 @@ public class RearrangeAndAsc {
 	}
 		
 	Collections.sort(list);
-	
+	System.out.println(list.size());
 	String output="";int i=0;
 	while(i<list.size()) {
 		output=output+list.get(i);
