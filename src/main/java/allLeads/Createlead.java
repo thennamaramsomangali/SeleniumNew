@@ -16,16 +16,21 @@ public class Createlead extends ProjectMethods{
 	public void createLead() {
 
 		//closeBrowser();
-		/*startApp("chrome", "http://leaftaps.com/opentaps");  //both parameters are of string datatype.so in ""
+		//startApp("chrome", "http://leaftaps.com/opentaps");  //both parameters are of string datatype.so in ""
 		System.out.println("create");
-		WebElement userName = locateElement("id","username");
+	}
+	
+	@Test	
+	public void sampleMethod() throws InterruptedException {
+		System.out.println("samplecreate");
+		/*WebElement userName = locateElement("id","username");
 		type(userName,"DemoSalesManager");
 		WebElement passWord = locateElement("id","password");
 		type(passWord,"crmsfa");
 		WebElement login = locateElement("class","decorativeSubmit");
 		click(login);*/
-		WebElement crmsfa = locateElement("link","CRM/SFA");
-		click(crmsfa);
+		/*WebElement crmsfa = locateElement("link","CRM/SFA");
+		click(crmsfa);*/
 
 
 

@@ -13,12 +13,15 @@ public class Table {
 	public static void main(String[] args) {
 		
 		//System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");		
-		ChromeDriver driver = new ChromeDriver();	
+		ChromeDriver driver = new ChromeDriver();
+	
 		driver.get("https://erail.in/");		
-		driver.manage().window().maximize();	
+		driver.manage().window().maximize();
+		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		driver.findElementById("txtStationFrom").clear();
+		
 		driver.findElementById("txtStationFrom").sendKeys("MAS", Keys.TAB);
 
 		driver.findElementById("txtStationTo").clear();
@@ -30,7 +33,7 @@ public class Table {
 			driver.findElementById("chkSelectDateOnly").click();			
 		}
 
-		/*WebElement table = driver.findElementByXPath("//table[@class='DataTable TrainList']"); //locate table
+		WebElement table = driver.findElementByXPath("//table[@class='DataTable TrainList']"); //locate table
 
 		List<WebElement> allRows = table.findElements(By.tagName("tr"));//all rows
 
@@ -42,12 +45,12 @@ public class Table {
 		System.out.println(columns.size());
 
 		columns.get(1).click(); //select column2
-*/		
+		
 		
 		/*for(int i=0;i<=6;i++) {
 		List<WebElement> firstRowFirstColumn = driver.findElementsByXPath("//table[@class='DataTable TrainList']/tbody/tr/td[i]");
 		WebElement eleValue = firstRowFirstColumn.get(i);
-		System.out.println(eleValue.getText());*/
+		System.out.println(eleValue.getText());
 		
 		for(int numberOfRows=1; numberOfRows<=22; numberOfRows++)
 		{
@@ -58,10 +61,17 @@ public class Table {
 	
 		}
 		System.out.println();
-		}
+		}*/
 		
-		//driver.findElementByXPath("(//table[@class='DataTable TrainList']//tr)[3]/td[3]").click();
 		
-	}}	
+		/*WebElement val = driver.findElementByXPath("(//table[@class='DataTable TrainList']//tr)[3]/td[2]");
+		System.out.println(val.getText());
+		
+		WebElement ele = driver.findElementByXPath("//table[@class='DataTable TrainList']//tr[3]/td[2]");
+		System.out.print(ele.getText());
+		ele.click();
+		
+		//above both same
+*/	}}
 		
 

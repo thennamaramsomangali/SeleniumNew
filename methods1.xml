@@ -5,10 +5,16 @@
   <classes>
       <class name="allLeads.ProjectMethods">
       <methods>
-      <include name="beforeClass"/>
-      <include name="beforeTest"/>
-      <include name="afterTest"/>
-      <include name="afterClass"/>
+     
+      <include name="beforeTest"></include>
+      <include name="beforeGroup"></include>
+      <include name="beforeClass"></include>
+      <include name="login"></include>
+      <include name="close"></include>
+      <include name="afterClass"></include>
+      <include name="beforeGroup"></include>
+      <include name="afterTest"></include>
+      
       </methods>
       </class>  
     </classes>

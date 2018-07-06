@@ -18,11 +18,16 @@ import wdMethods.SeMethods;
 
 //public class EditLead extends SeMethods{
 public class EditLead extends ProjectMethods{
-	@Test (groups={"All"}) //(groups={"sanity"}) //(dependsOnMethods= {"testcases.CreateTestLead.createLead"})
+	@Test //(groups={"All"}) //(groups={"sanity"}) //(dependsOnMethods= {"testcases.CreateTestLead.createLead"})
 	public void editLead() throws InterruptedException {
 
-		startApp("chrome", "http://leaftaps.com/opentaps");
+		//startApp("chrome", "http://leaftaps.com/opentaps");
 		System.out.println("edit");
+	}
+	
+	@Test	
+	public void sampleMethod() throws InterruptedException {
+		System.out.println("sampleedit");
 		/*WebElement userName = locateElement("id","username");
 		type(userName, "DemoSalesManager");
 		WebElement passWord = locateElement("id", "password");
@@ -33,6 +38,8 @@ public class EditLead extends ProjectMethods{
 		WebElement crmsfa = locateElement("link","CRM/SFA");
 		click(crmsfa);
 		 */
+		
+		
 		/*Thread.sleep(2000);
 
 		WebElement leads = locateElement("link","Leads");

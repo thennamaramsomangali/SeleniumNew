@@ -7,15 +7,22 @@ import allLeads.ProjectMethods;
 import wdMethods.SeMethods;
 
 //public class DuplicateLead extends SeMethods {
+@Test (groups={"DuplicateLead"}) 
 public class DuplicateLead extends ProjectMethods {
-	@Test  (groups={"All"} ,enabled=false) //(groups={"regression"}) 
+	 //(groups={"All"} ,enabled=false) 
 	//@Test (invocationCount=4,threadPoolSize=4) 
 	//@Test (invocationCount=4,threadPoolSize=4,invocationTimeOut=10000) 
 	//@Test (invocationCount=4)
 	public void duplicateLead() throws InterruptedException {
 		
-		startApp("chrome", "http://leaftaps.com/opentaps");
+		//startApp("chrome", "http://leaftaps.com/opentaps");
 		System.out.println("duplicate");
+	}
+	
+	/*@Test (invocationCount=4,threadPoolSize=4,invocationTimeOut=10000)
+	//@Test (invocationCount=4)
+	public void sampleMethod() throws InterruptedException {
+		System.out.println("sampleduplicate");*/
 		/*WebElement userName = locateElement("id","username");
 		type(userName, "DemoSalesManager");
 		WebElement passWord = locateElement("id", "password");
@@ -75,4 +82,3 @@ public class DuplicateLead extends ProjectMethods {
 */	}
 	
 
-}

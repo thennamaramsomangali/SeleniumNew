@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="classes">
   <parameter name="password" value="crmsfa"/>
   <parameter name="browser" value="chrome"/>
   <parameter name="url" value="http://leaftaps.com/opentaps"/>
   <parameter name="username" value="DemoSalesManager"/>
-  <test name="Test(failed)">
+  <test thread-count="5" name="Test(failed)" parallel="classes">
     <classes>
       <class name="allLeads.CreateLeadNew">
         <methods>
-          <include name="createLead"/>
+          <include name="createLead" invocation-numbers="0"/>
+          <include name="close"/>
           <include name="login"/>
           <include name="excelSheet"/>
         </methods>
       </class> <!-- allLeads.CreateLeadNew -->
+      <class name="allLeads.EditLeadNew">
+        <methods>
+          <include name="editLead" invocation-numbers="0"/>
+          <include name="excelSheet"/>
+          <include name="close"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- allLeads.EditLeadNew -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

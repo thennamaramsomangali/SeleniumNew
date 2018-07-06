@@ -37,7 +37,7 @@ public class NineMethods {
 		//System.out.println(driver.findElementByName("username").getAttribute("value")); //get attribute value of "Get default text entered"  ans:TestLeaf
 
 		driver.get("http://testleaf.herokuapp.com/pages/Link.html"); 
-
+		System.out.println("============");
 		System.out.println(driver.findElementByLinkText("Find where am supposed to go without clicking me?").getAttribute("href")); //http://testleaf.herokuapp.com/pages/Button.html
 
 		driver.get("http://testleaf.herokuapp.com/pages/Button.html");
@@ -46,6 +46,7 @@ public class NineMethods {
 		System.out.println(driver.findElementById("color").getText()); //What color am I?
 
 		System.out.println(driver.findElementById("color").getLocation().getX()); //240
+		System.out.println(driver.findElementById("color").getSize()); //(122,20)
 		System.out.println(driver.findElementById("color").getSize().getWidth()); //122
 		System.out.println(driver.findElementById("color").getTagName()); //button
 

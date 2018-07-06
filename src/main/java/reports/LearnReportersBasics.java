@@ -10,7 +10,6 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 public class LearnReportersBasics {
 
-		
 		public void beforeSuite() throws IOException {
 			
 			ExtentHtmlReporter html = new ExtentHtmlReporter(new File("./snaps/result.html"));
@@ -19,7 +18,7 @@ public class LearnReportersBasics {
 			extent.attachReporter(html);	
 		
 			ExtentTest test = extent.createTest("TC001_CreateLead", "Create a new Lead");
-			test.assignAuthor("Raji");
+			test.assignAuthor("ganesh");
 			test.assignCategory("Smoke");	
 		
 			test.pass("The data DemoSalesManager is entered Successfully",
