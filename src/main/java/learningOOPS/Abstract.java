@@ -6,8 +6,18 @@ abstract class Abstract {
 
 
 	}
+	
+	public Abstract() {  //constructor
+	}
+	
+	
 
 	abstract void frontlight();
+	
+	/*public static void main(String[] agrs) {
+		
+		Abstract obj=new Abstract();
+	}*/
 	
 }
 

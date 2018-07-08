@@ -4,6 +4,8 @@ public interface  InterfaceA {
 	
 	public void show();
 	
+	
+	
 	//in interface only method declaration
 	
 	//InterfaceA obj=new InterfaceA(); //not possible
