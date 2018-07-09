@@ -1,9 +1,11 @@
 package modifiers;
 
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.PriorityQueue;
 import java.util.Set;
-
+import java.util.TreeSet;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -118,6 +120,8 @@ public class FlipkartTestCase   {
 		//switch to second window
 
 		Set<String> allWindows = driver.getWindowHandles();
+		//Set<String> allWindowss=new TreeSet<String>();
+		
 		
 		List<String> listofWindow = new ArrayList<String>();
 		listofWindow.addAll(allWindows);

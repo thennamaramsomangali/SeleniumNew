@@ -23,6 +23,7 @@ public class Switchcase {
 				
 			default:
 				System.out.println("default");
+				
 			
 			}
 
